@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: white;
+    padding: 12px 20px;
+}
+.logo img {width: 50px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #4458dc;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #854fee;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: white;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+.home{
+    margin-top: 60px;
+}
+.home-content{
+    color: black;
+}
+.home-content h3{
+    font-family: "Rubik", sans-serif;
+    font-size: 40px;
+}
+.home-content h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+.home-content h5{
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.home-content button{
+    width: 140px;
+    height: 50px;
+    font-family: "Rubik", sans-serif;
+    font-size: 17px;
+    border: 2px solid #854fee;
+    background: none;
+    border-radius: 5px;
+}
+.home-content button:hover{
+    background-image: linear-gradient(#4458dc, #854fee);
+    color: white;
+}
+.home-img img{
+    width: 450px;
+    height: 430px;
+}
+@media screen and (max-width: 460px){
+    .home-content h1{
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    .home-img img{
+        width: 380px;
+        height: 380px;
+    }
+}
+.skill-header h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+}
+.skill-1{
+    height: 240px;
+    width: 250px;
+    border:  3px solid #854fee;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.skill-1:hover{
+    box-shadow: 0 4px 8px 0 #4458dc;
+    background: linear-gradient(#4458dc, #854fee);
+}
+.skill-1 h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.skill-2{
+    height: 240px;
+    width: 250px;
+    border:  3px solid #854fee;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.skill-2:hover{
+    box-shadow: 0 4px 8px 0 #4458dc;
+    background: linear-gradient(#4458dc, #854fee);
+}
+.skill-2 h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.skill-3{
+    height: 240px;
+    width: 250px;
+    border:  3px solid #854fee;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.skill-3:hover{
+    box-shadow: 0 4px 8px 0 #4458dc;
+    background: linear-gradient(#4458dc, #854fee);
+}
+.skill-3 h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.skill-4{
+    height: 240px;
+    width: 250px;
+    border:  3px solid #854fee;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.skill-4:hover{
+    box-shadow: 0 4px 8px 0 #4458dc;
+    background: linear-gradient(#4458dc, #854fee);
+}
+.skill-4 h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.skills{
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+@media screen and (max-width: 768px){
+    .skills{
+        display: flex;
+        flex-direction: column;
+        row-gap:  20px;
+    }
+    .skill-1, .skill-2, .skill-3, .skill-4 {
+        margin: auto;
+    }
+}
+@media screen and (max-width: 991px){
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap:  20px;
+    }
+}
+.skills-2{
+    padding-bottom: 50px;
+}
+.skill-5{
+    height: 240px;
+    width: 250px;
+    border:  3px solid #854fee;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.skill-5:hover{
+    box-shadow: 0 4px 8px 0 #4458dc;
+    background: linear-gradient(#4458dc, #854fee);
+}
+.skill-5 h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.skill-6{
+    height: 240px;
+    width: 250px;
+    border:  3px solid #854fee;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.skill-6:hover{
+    box-shadow: 0 4px 8px 0 #4458dc;
+    background: linear-gradient(#4458dc, #854fee);
+}
+.skill-6 h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.skill-7{
+    height: 240px;
+    width: 250px;
+    border:  3px solid #854fee;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.skill-7:hover{
+    box-shadow: 0 4px 8px 0 #4458dc;
+    background: linear-gradient(#4458dc, #854fee);
+}
+.skill-7 h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+}
+@media screen and (max-width: 768px){
+    .skills-2{
+        display: flex;
+        flex-direction: column;
+        row-gap:  20px;
+    }
+    .skill-5, .skill-6, .skill-7 {
+        margin: auto;
+    }
+}
+@media screen and (max-width: 991px){
+    .skills-2{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap:  20px;
+    }
+}
+.section-2{
+    width: 90%;
+    height: 460px;
+    box-shadow: 0 0 10px 10px #854fee;
+    font-family: "Rubik", sans-serif;
+    margin: auto;
+    margin-top: 100px;
+}
+.project-header h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+    padding-bottom: 30px;
+}
+.project-1, .project-2, .project-3{
+    text-align: center;
+}
+.project-1 h3, .project-2 h3, .project-3 h3{
+    color: black;
+    font-size: 28px;
+}
+.project-1 p, .project-2 p, .project-3 p{
+    color: black;
+    line-height: 1.7;
+}
+.project-1 button, .project-2 button, .project-3 button{
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    border: 2px solid #854fee;
+    background: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.project-1 button:hover, .project-2 button:hover, .project-3 button:hover{
+    background-image: linear-gradient(#4458dc, #854fee);
+    color: white;
+}
+@media screen and (max-width: 991px){
+    .section-2{
+        height: 750px;
+    }
+}
+@media screen and (max-width: 476px){
+    .section-2{
+        height: auto;
+    }
+    .projects{
+        padding-bottom: 50px;
+    }
+}
+footer{
+    width: 100%;
+    height: 350px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-image: linear-gradient(#4458dc, #854fee);
+    margin-top: 150px;
+}
+.contact-header h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    padding-bottom: 30px;
+}
+.contact-content{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    padding-bottom: 30px;
+}
+.contact-content img{
+    height: 40px;
+}
+.mail, .phone{
+    font-size: 28px;
+    padding-left: 15px;
+}
+.contact-content a img:hover{
+    background: #4458dc;
+}
+@media screen and (max-width: 776px){
+    .contact-header h1{
+        font-size: 30px;
+    }
+    .contact-content{
+        font-size: 25px;
+    }
+    .mail, .phone{
+        font-size: 24px;
+    }
+    .contact-content img{
+        height: 30px;
+    }
+    .phone{
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 476px){
+    .contact-header h1{
+        font-size: 27px;
+    }
+    .mail, .phone{
+        font-size: 22px;
+    }
+    .contact-content img{
+        height: 26px;
+    }
+    footer{
+        height: 300px;
+    }
+}
